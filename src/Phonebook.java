@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Phonebook {
 
@@ -12,6 +14,8 @@ public class Phonebook {
         phonebook.put(number, name);
     }
 
+    //Рабочий вариант метода через keySet(), возращающий String с номерами
+    /*
     public String get(String name) {
         StringBuilder data = new StringBuilder();
 
@@ -27,6 +31,18 @@ public class Phonebook {
 
         return data.toString();
     }
+     */
 
+    //Аналогичный метод с использованием Map.Entry, возращающий ArrayList с номерами
+    public ArrayList<Integer> get(String name) {
+        ArrayList<Integer> data = new ArrayList<>();
+
+        for (Map.Entry<Integer, String> mapEntry : phonebook.entrySet()) {
+            if (mapEntry.getValue().equals(name)) {
+                data.add(mapEntry.getKey());
+            }
+        }
+        return data;
+    }
 
     }

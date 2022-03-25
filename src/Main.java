@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
 
         //Первое задание
-        String[] arr = {"раз", "два", "три", "два", "три", "три", "четыре", "пять", "шесть", "семь"};
+        String[] arr = {"раз", "два", "три", "четыре", "два", "три", "три", "четыре", "четыре", "четыре"};
         System.out.println("Считаем уникальные значения: \n" + UniqueValues.countUniqueValues(arr)+"\n");
 
 
